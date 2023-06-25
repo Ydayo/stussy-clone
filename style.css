@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  /* top: 0;
+    left: 0; */
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background-color: #fff;
+  z-index: 100000;
+}
+
+header .header-left {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+header .header-left ul li a.shop {
+  font-size: 12px;
+}
+
+header .header-left ul li a.shop:hover {
+  text-decoration: underline;
+  font-weight: 600px;
+}
+
+header .header-left svg {
+  height: 40px;
+  margin-right: 15px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+header .header-right ul {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+header .header-right ul li:hover {
+  color: gray;
+}
+
+header .header-right ul li:nth-child(2) {
+  margin-left: 10px;
+}
+
+.hover-menu {
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  width: 20%;
+  height: 100vh;
+  padding-top: 20px;
+  font-size: 10px;
+  visibility: hidden;
+  text-align: left;
+  z-index: 10;
+}
+
+header .header-left ul li:hover .hover-menu {
+  visibility: visible;
+  z-index: 10;
+}
+
+.hover-menu ul li {
+  padding-bottom: 11px;
+  margin-left: 40%;
+  z-index: 10;
+}
+
+.search {
+  position: fixed;
+  width: 100%;
+  top: 60px;
+  z-index: 100000;
+  text-align: center;
+  background-color: #fff;
+  border: none;
+  display: none;
+}
+.active {
+  display: block;
+}
+
+.search input {
+  max-width: 100%;
+  width: 60%;
+  position: relative;
+  padding: 15px 15px 10px 15px;
+  margin-bottom: 5px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid gray;
+  outline: none;
+  position: relative;
+}
+
+.search .bi-search {
+  position: absolute;
+  z-index: 1000000;
+  top: 11px;
+  left: 19.6%;
+}
+
+.search .bi-x {
+  position: absolute;
+  top: 20px;
+  right: 20%;
+}
+
+main {
+  max-width: 100%;
+  padding-top: 60px;
+  margin-bottom: 30px;
+}
+
+main .main-pic {
+  position: relative;
+  /* transition: 0.3s; */
+}
+
+main .main-pic:hover {
+  transition: 0.3s;
+}
+
+main .main-pic:hover::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+}
+
+main .main1:hover::before,
+main .main2:hover::before,
+main .main3:hover::before,
+main .main4:hover::before {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 800;
+  z-index: 4;
+}
+
+main .main1:hover::before {
+  content: "NEW ARRIVALS";
+}
+main .main2:hover::before {
+  content: "PANTS";
+}
+main .main3:hover::before {
+  content: "OUTHERWEAR";
+}
+main .main4:hover::before {
+  content: "ACCESSORIES";
+}
+
+main .main-pic:nth-child(2),
+main .main-pic:nth-child(4) {
+  margin-left: 20px;
+}
+
+main .main-pic h3 {
+  text-align: center;
+  display: none;
+}
+
+main .main-pic img {
+  max-width: 100%;
+}
+
+.main-div {
+  display: flex;
+  margin: 0 250px 15px 250px;
+}
+
+.main-div-2 {
+  display: flex;
+  margin: 0 250px;
+}
+
+footer {
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+}
+
+footer .footer-center {
+  margin-left: 210px;
+}
+
+footer .footer-right ul {
+  display: flex;
+}
+
+footer .footer-right ul li:nth-child(2),
+footer .footer-right ul li:nth-child(3),
+footer .footer-right ul li:nth-child(4),
+footer .footer-right ul li:nth-child(5) {
+  margin-left: 10px;
+}
+
+footer .footer-right ul li a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1090px) {
+  .main-div {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+  .main-div img {
+    height: 100%;
+    width: 100%;
+  }
+  .main-div-2 {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  .main-div-2 img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  main .main-pic h3 {
+    font-size: 25px;
+    display: block;
+    padding: 10px 30px 30px 30px;
+  }
+  main .main1:hover::before,
+  main .main2:hover::before,
+  main .main3:hover::before,
+  main .main4:hover::before {
+    display: none;
+  }
+
+  main .main-pic:nth-child(2),
+  main .main-pic:nth-child(4) {
+    margin-left: 0;
+  }
+}
+@media (max-width: 900px) {
+  footer {
+    display: block;
+    text-align: center;
+  }
+
+  footer .footer-center {
+    margin: 15px 0;
+  }
+
+  footer .footer-right {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1050px) {
+  .hover-menu {
+    width: 40%;
+  }
+}
+@media (max-width: 600px) {
+  .hover-menu {
+    width: 50%;
+  }
+}
